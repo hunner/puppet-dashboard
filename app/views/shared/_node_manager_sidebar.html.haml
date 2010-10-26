@@ -17,8 +17,3 @@
       = link_to "Not currently reporting", no_longer_reporting_nodes_path
       - count = Node.count_no_longer_reporting
       %span.count{:class => counter_class(count, true)}= count
-  .footer.actionbar
-    = link_to "Add node", new_node_path, :class => 'button'
-
-- for type in [NodeClass, NodeGroup]
-  = render "shared/node_manager_sidebar_for_type", :type => type
